@@ -1,0 +1,161 @@
+.quiz-viewer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 480px) {
+  .quiz-viewer-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+.quiz-options-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .quiz-options-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.quiz-identify-options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .quiz-identify-options-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+.quiz-question-box {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--surface-color);
+  border-radius: var(--radius-lg);
+}
+
+@media (max-width: 480px) {
+  .quiz-question-box {
+    padding: 1rem;
+  }
+}
+
+.interactive-truth-table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--surface-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1rem;
+}
+
+.interactive-truth-table th,
+.interactive-truth-table td {
+  padding: 0.5rem 0.5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+
+.interactive-truth-table th {
+  background-color: var(--background-color);
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.interactive-truth-table tr:last-child td {
+  border-bottom: none;
+}
+
+.interactive-truth-table .var-cell {
+  color: var(--text-muted);
+}
+
+.interactive-truth-table .action-cell {
+  padding: 0.4rem;
+}
+
+.table-toggle-btn {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto;
+  border-radius: var(--radius-sm);
+  border: 2px dashed var(--border-color);
+  background: transparent;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 500px) {
+  .interactive-truth-table th,
+  .interactive-truth-table td {
+    padding: 0.3rem 0.15rem;
+  }
+  .interactive-truth-table th {
+    font-size: 0.7rem;
+    line-height: 1.1;
+  }
+  .interactive-truth-table td {
+    font-size: 0.8rem;
+  }
+  .table-toggle-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+    border-width: 1.5px;
+  }
+}
+
+.table-toggle-btn.has-value {
+  border-style: solid;
+  border-color: var(--primary-color);
+  background-color: rgba(var(--primary-color-rgb), 0.1);
+  color: var(--primary-color);
+}
+
+.table-toggle-btn:hover:not(:disabled) {
+  border-color: var(--primary-color);
+  background-color: rgba(var(--primary-color-rgb), 0.05);
+}
+
+.table-toggle-btn:disabled {
+  cursor: default;
+}
+
+.row-error {
+  background-color: rgba(var(--error-color-rgb), 0.1);
+}
+
+.table-toggle-btn.btn-error {
+  border-color: var(--error-color);
+  color: var(--error-color);
+  background-color: rgba(var(--error-color-rgb), 0.1);
+}
+
+.row-success {
+  background-color: rgba(var(--success-color-rgb), 0.1);
+}
+
+.table-toggle-btn.btn-success {
+  border-color: var(--success-color);
+  color: var(--success-color);
+  background-color: rgba(var(--success-color-rgb), 0.1);
+}

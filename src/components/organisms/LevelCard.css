@@ -1,0 +1,52 @@
+.level-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.level-card-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.level-card-disabled:hover {
+  transform: none;
+  box-shadow: var(--shadow-sm);
+  border-color: var(--border-color);
+}
+
+.level-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.level-card-desc {
+  flex-grow: 1;
+}
+
+.level-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.lesson-count {
+  color: var(--text-muted);
+}
+
+.action-text {
+  color: var(--accent-color);
+  transition: transform 0.2s;
+}
+
+.level-card:not(.level-card-disabled):hover .action-text {
+  transform: translateX(4px);
+}
+
+.disabled-text {
+  color: var(--text-muted);
+}

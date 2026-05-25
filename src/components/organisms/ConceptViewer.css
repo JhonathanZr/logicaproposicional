@@ -1,0 +1,83 @@
+.concept-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .concept-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.connectors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1rem;
+}
+
+.connector-card {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.interactive-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .interactive-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+.interactive-actions {
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.concept-truth-table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--surface-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.concept-truth-table th,
+.concept-truth-table td {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.concept-truth-table th {
+  background-color: var(--background-color);
+  font-weight: bold;
+}
+
+.concept-truth-table tr:last-child td {
+  border-bottom: none;
+}
+
+.concept-truth-table .result-cell {
+  font-weight: bold;
+  color: var(--primary-color);
+  background-color: rgba(var(--primary-color-rgb), 0.05);
+}
