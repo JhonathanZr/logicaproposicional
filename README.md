@@ -117,6 +117,3 @@ logic_game/
 *   **ESLint**: Para asegurar buenas prácticas y un estándar de código limpio y consistente.
 
 ---
-
-## 🏆 Créditos
-Creado con dedicación para hacer del aprendizaje de la lógica matemática una experiencia divertida, interactiva y accesible. ¡Que empiece el juego lógico! 🚀
